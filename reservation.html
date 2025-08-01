@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservation | Italian</title>
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: #faf2ee; 
+      margin: 0; padding: 0; }
+    .container { 
+      max-width: 400px; 
+      margin: 60px auto; 
+      background: #fff; 
+      border-radius: 12px; 
+      padding: 2rem; 
+      box-shadow: 0 2px 12px #0001; }
+    h2 { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 2rem; 
+      margin-bottom: 1.5rem; 
+      text-align: center; }
+    form { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1rem; }
+    label { 
+      margin-bottom: 0.3rem; 
+      font-weight: 600; }
+    input, select, textarea {
+      padding: 0.7rem; 
+      border: 1px solid #ccc; 
+      border-radius: 7px;
+      font-size: 1rem; 
+      font-family: inherit;
+    }
+    button {
+      padding: 0.8rem; 
+      background: #fad89a; 
+      color: #2e1812;
+      font-weight: 700; 
+      border: none; 
+      border-radius: 7px;
+      cursor: pointer; 
+      font-size: 1.1rem;
+      margin-top: 0.7rem;
+    }
+    button:hover { background: #eac375; }
+    .success-message {
+      display: none;
+      margin-top: 2rem;
+      background: #e7ffe7;
+      color: #236327;
+      padding: 1.2rem;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      text-align: center;
+      border: 1px solid #a7d7a7;
+      animation: fadeIn 0.7s;
+    }
+    .success-message.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <button style="color: #000000;" onclick="window.location.href='index.html'">Back</button>
+  <div class="container">
+    <h2>Reserve a Table</h2>
+    <form id="reservationForm" autocomplete="off">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" required />
+
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date" required />
+
+      <label for="time">Time</label>
+      <input id="time" name="time" type="time" required />
+
+      <label for="guests">Number of Guests</label>
+      <select id="guests" name="guests" required>
+        <option value="">Select</option>
+        <option>1</option><option>2</option><option>3</option>
+        <option>4</option><option>5</option><option>6+</option>
+      </select>
+
+      <button type="submit">Book Now</button>
+
+    </form>
+
+    <div class="success-message" id="successMessage">
+      <strong>Reservation submitted successfully!</strong><br />
+      Thank you for reserving your table with Delizia Ristorante.
+    </div>
+  </div>
+  <style src="styles.css"></style>
+  <script src="script.js"></script>
+</body>
+</html>

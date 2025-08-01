@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Italian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: #2d181a;
+      color: #fad89a;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      background: #1a1012;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #fad89a; display: flex; align-items: center; gap: 0.5rem;
+    }
+    nav ul {
+      list-style: none; display: flex; gap: 1.2rem; margin: 0; padding: 0;
+    }
+    nav a {
+      text-decoration: none; color: #fad89a; font-weight: 500; display: flex; align-items: center; gap: 0.35rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+    }
+    nav a:hover { background: #fad89a22; color: #fff; }
+    .container {
+      max-width: 650px; margin: 2.5rem auto; padding: 1.5rem; background: #251215; border-radius: 15px;
+      box-shadow: 0 3px 18px 0 rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin-bottom: 1.1rem;
+      color: #fad89a;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .menu-section {
+      margin-bottom: 2rem;
+    }
+    .menu-section h2 {
+      font-size: 1.3rem;
+      color: #fa7662;
+      margin-bottom: 0.7rem;
+      font-family: 'Playfair Display', serif;
+      border-bottom: 1px solid #483032;
+      display: inline-block;
+      padding-bottom: 0.18rem;
+    }
+    .menu-list {
+      list-style: none; padding-left: 0;
+    }
+    .menu-item {
+      margin-bottom: 0.8rem;
+      display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px dashed #483032; padding-bottom: 0.3rem;
+    }
+    .dish-name {
+      font-weight: 600;
+      color: #fad89a;
+      font-size: 1rem;
+    }
+    .dish-price {
+      color: #fa7662;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .dish-desc {
+      display: block;
+      font-size: 0.98rem;
+      color: #d7c2ae;
+      margin-top: 0.08rem;
+      margin-bottom: 0.1rem;
+    }
+    @media (max-width: 700px) {
+      .container { margin: 1rem; padding: 1rem; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><i class="fas fa-utensils"></i>Italian</div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i>Index</a></li>
+      <li><a href="menu.html"><i class="fas fa-book-open"></i>Menu</a></li>
+      <li><a href="about.html"><i class="fas fa-users"></i>About</a></li>
+      <li><a href="reservation.html"><i class="fas fa-chair"></i>Reservation</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Our Menu</h1>
+
+    <div class="menu-section">
+      <h2>Starters</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Bruschetta</span>
+            <span class="dish-desc">Toasted bread, tomato, basil, olive oil</span>
+          </div>
+          <span class="dish-price">₹230</span>
+        </li>
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Caprese Salad</span>
+            <span class="dish-desc">Fresh mozzarella, tomatoes, basil, balsamic glaze</span>
+          </div>
+          <span class="dish-price">₹320</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h2>Pasta</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Spaghetti Carbonara</span>
+            <span class="dish-desc">Creamy egg sauce, pancetta, black pepper, parmesan</span>
+          </div>
+          <span class="dish-price">₹480</span>
+        </li>
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Penne Arrabbiata</span>
+            <span class="dish-desc">Spicy tomato sauce, garlic, chili, parsley</span>
+          </div>
+          <span class="dish-price">₹420</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h2>Pizzas</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Margherita</span>
+            <span class="dish-desc">Tomato, mozzarella, basil</span>
+          </div>
+          <span class="dish-price">₹390</span>
+        </li>
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Quattro Formaggi</span>
+            <span class="dish-desc">Four cheese: mozzarella, parmesan, gorgonzola, fontina</span>
+          </div>
+          <span class="dish-price">₹490</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu-section">
+      <h2>Desserts</h2>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Tiramisu</span>
+            <span class="dish-desc">Coffee-soaked ladyfingers, mascarpone, cocoa</span>
+          </div>
+          <span class="dish-price">₹250</span>
+        </li>
+        <li class="menu-item">
+          <div>
+            <span class="dish-name">Panna Cotta</span>
+            <span class="dish-desc">Vanilla cream, berry compote</span>
+          </div>
+          <span class="dish-price">₹220</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

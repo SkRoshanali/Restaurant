@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Italian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #faf2ee;
+      color: #2e1812;
+      line-height: 1.6;
+      padding-top: 60px;
+    }
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: #222; color: #fff;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.5rem; z-index: 1000;
+    }
+    nav .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fad89a; }
+    nav ul {
+      list-style: none; display: flex; gap: 1rem;
+    }
+    nav a {
+      text-decoration: none; color: white; font-weight: 500;
+    }
+    nav a:hover { color: #fad89a; }
+
+
+    .hero {
+      height: 250px; background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center; padding: 1rem;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 2rem; }
+    .container {
+      max-width: 800px; margin: 2rem auto; padding: 1rem;
+      background: white; border-radius: 10px;
+    }
+    h2 { 
+    font-family: 'Playfair Display', serif; 
+    margin-top: 1.5rem; }
+    ul { 
+      padding-left: 1.2rem; }
+
+
+    .team {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 1rem; 
+      justify-content: center; 
+      margin-top: 2rem;
+    }
+    .team-member {
+      text-align: center; 
+      padding: 1rem;
+      background: #faf2ee; 
+      border-radius: 10px;
+      max-width: 200px;
+    }
+    .team-member img {
+      width: 70px; 
+      height: 70px; 
+      border-radius: 50%;
+      object-fit: cover; 
+      margin-bottom: 0.5rem;
+    }
+    .team-member .role {
+      font-weight: bold; color: #ad8421; margin: 0.3rem 0;
+    }
+
+
+    @media (max-width: 600px) {
+      nav { 
+        flex-direction: column; 
+        gap: 0.5rem; }
+      .hero h1 { 
+        font-size: 1.3rem; 
+      }
+      .team { 
+        flex-direction: column; 
+        align-items: center;
+       }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🍝 Italian</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <h1>About Delizia Ristorante</h1>
+      <p>Celebrating the art of Italian cuisine since 1998.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Our Story</h2>
+    <p>Since 1998, Delizia Ristorante has delivered authentic Italian flavors with warm hospitality. From humble beginnings, we’ve become a cherished local spot for Italian traditions and dishes made with love.</p>
+    <p>We use fresh local ingredients, honor family recipes, and treat guests like family. Whether dining in or taking out, quality and care are in every bite.</p>
+
+    <h2>What Sets Us Apart</h2>
+    <ul>
+      <li>Traditional hand-crafted recipes</li>
+      <li>Farm-to-table ingredients</li>
+      <li>Skilled Italian chefs</li>
+      <li>Fine Italian wines</li>
+      <li>Warm, friendly service</li>
+    </ul>
+
+    <!-- "Meet Our Team" section removed -->
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Italian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #faf2ee;
+      color: #2e1812;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #222; padding: 1rem 2rem; position: fixed; top: 0; width: 100%; z-index: 1000;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #fad89a; display: flex; align-items: center; gap: 0.5rem;
+    }
+    nav .logo i { color: #fad89a; }
+    nav ul {
+      list-style: none; display: flex; gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none; color: #fff; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 1rem; border-radius: 25px;
+    }
+    nav a:hover { background: #fad89a22; color: #fad89a; }
+    .nav-social { display: flex; gap: 0.7rem; }
+    .nav-social a { font-size: 1.1rem; color: #fff; }
+
+    .hero-image {
+      width: 100%;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .image-overlay {
+      position: absolute; top: 0; left: 0; right: 0; height: 400px;
+      background: linear-gradient(135deg,rgba(0,0,0,0.6),rgba(135,27,17,0.4));
+      display: flex; align-items: center; justify-content: center; color: #fff;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero-content {
+      text-align: center; max-width: 800px; padding: 2rem;
+      position: relative; width: 100%;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; margin-bottom: 1rem;
+    }
+    .hero-subtitle { font-size: 1.15rem; font-weight: 300; margin-bottom: 1.2rem; }
+    .features-section { padding: 2.5rem 0; background: #fff; }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 2rem;
+    }
+    .features-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 1.1rem; 
+      margin-top: 1.3rem;
+    }
+    .feature-card {
+      background: #faf2ee; 
+      padding: 1.4rem 1rem; 
+      border-radius: 12px;
+      text-align: center;
+    }
+    .feature-icon {
+      background: #fad89a; 
+      width: 56px; height: 56px; 
+      border-radius: 50%; 
+      display: flex; align-items: 
+      center; justify-content: center;
+      margin: 0 auto 0.8rem; 
+      font-size: 1.3rem; 
+      color: #2e1812;
+    }
+    .feature-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.7rem;
+    }
+    .feature-card p { color: #666; font-size: 0.96rem; }
+
+    header {
+      text-align: center; padding: 4rem 2rem; background: #2e1812 url('./assets/hero.jpg') center/cover no-repeat;
+      color: #fff8ef; position: relative;
+    }
+    header::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg,rgba(46,24,18,0.7),rgba(135,27,17,0.5));
+    }
+    header > * { position: relative; z-index: 1; }
+    header h1 {
+      font-family: 'Playfair Display', serif; font-size: 2.3rem; margin-bottom: 1rem; font-weight: 700;
+    }
+    header p { font-size: 1.08rem; margin-bottom: 2rem; font-weight: 300; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-btn {
+      padding: 0.7rem 1.6rem; border: none; border-radius: 23px; font-weight: 600; font-size: 1rem; text-decoration: none; display: inline-block; cursor: pointer;
+    }
+    .cta-btn.primary { background: #fad89a; color: #2e1812; }
+    .cta-btn.secondary { background: transparent; color: #fff; border: 2px solid #fad89a; }
+    .cta-btn.secondary:hover { background: #fad89a; color: #2e1812; }
+    @media (max-width: 768px) {
+      nav { padding: 1rem 0.7rem; flex-direction: column; gap: 0.7rem; }
+      nav ul { gap: 1rem; }
+      .nav-social { order: -1; }
+      .hero-image img { height: 220px; }
+      .hero-title { font-size: 1.7rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      header { padding: 2.2rem 0.7rem; }
+      header h1 { font-size: 1.6rem; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .image-overlay { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <i class="fas fa-utensils"></i>
+      Italian
+    </div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Index</a></li>
+      <li><a href="menu.html"><i class="fas fa-book-open"></i> Menu</a></li>
+      <li><a href="about.html"><i class="fas fa-users"></i> About</a></li>
+      <li><a href="reservation.html"><i class=""></i> Reservation</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </nav>
+  <section class="hero-image">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Italian Restaurant Interior" />
+    <div class="image-overlay">
+      <div class="hero-content">
+        <h2 class="hero-title">Authentic Italian Dining Experience</h2>
+        <p class="hero-subtitle">Where tradition meets culinary excellence</p>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Delicious Italian Food" />
+    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Chef Cooking" />
+  </section>
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Delizia?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
+          <h3>Quick Service</h3>
+          <p>Fast and efficient service without compromising quality</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Fresh Ingredients</h3>
+          <p>Locally sourced, organic ingredients delivered daily</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chef-hat"></i></div>
+          <h3>Expert Chefs</h3>
+          <p>Authentic Italian recipes by our master chefs</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-wine-glass"></i></div>
+          <h3>Fine Wines</h3>
+          <p>Curated selection of Italian wines to complement your meal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <header>
+    <h1>Welcome to Italian Restaurant</h1>
+    <p>Authentic Italian flavors in the heart of your city</p>
+    <div class="cta-buttons">
+      <a href="menu.html" class="cta-btn primary">View Our Menu</a>
+    </div>
+  </header>
+</body>
+</html>
